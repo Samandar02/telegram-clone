@@ -1,0 +1,51 @@
+@import '../../styles/abstracts';
+.navbar{
+    width: 20%;
+    border: 1px solid;
+    height: 100vh;
+    .nav-items{
+        .nav-item{
+            padding: 14px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            i{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: $primary-color;
+                width: 28px;
+                height: 28px;
+                color: white;
+                transform: scale(1.095);
+                margin-right: 12px;
+                border-radius: 8px;
+            }
+            .item-profile{
+                border-bottom: 1px solid;
+                padding-bottom: 12px;
+                .profile-image{
+                    margin: 18px;
+                    margin-left: 24px;
+                    img{
+                        border-radius: 50%;
+                    }
+                }
+                .profile-body{
+                        
+                        margin-left: 24px;
+                    
+                }
+            }
+        }
+    }
+    & > input[type="checkbox"]{
+        display: inline-block;
+        position: fixed;
+        top: 12px;
+        left: 12px;
+        width: 24px;
+        height: 24px;
+        z-index: -1;
+    }
+}
