@@ -7,6 +7,7 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { ContactsComponent } from './contacts/contacts.component';
 import { InfoComponent } from './info/info.component';
 import { MessagesComponent } from './messages/messages.component';
+import { SummaryPipe } from './summary.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { MessagesComponent } from './messages/messages.component';
     NavbarComponent,
     ContactsComponent,
     InfoComponent,
-    MessagesComponent
+    MessagesComponent,
+    SummaryPipe
   ],
   imports: [
     BrowserModule,

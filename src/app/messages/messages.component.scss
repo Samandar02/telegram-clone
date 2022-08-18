@@ -1,0 +1,27 @@
+.message{
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100vh;
+    .message-header{
+        padding: 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        
+    }
+    .message-content{
+        height: 80vh;
+        background-image: url(https://i.pinimg.com/736x/3d/8c/2f/3d8c2f2c82c1c9ef1e27be645cd1aa17.jpg);
+        background-size: cover;
+    }
+    .sender{
+        input{
+            padding: 12px 24px;
+            width: 100%;
+            outline: none;
+            border: none;
+        }
+    }
+}

@@ -1,1 +1,23 @@
-<p>contacts works!</p>
+<input placeholder="Search" type="text">
+<div class="contacts">
+
+    <div class="contact" *ngFor="let contact of contacts">
+        <div class="contact-image">
+            <img [src]="contact.image" alt="">
+        </div>
+        <div class="contact-body">
+            <div class="body-title">
+                <div class="title-head">
+                    <h4>{{contact.firstName }} {{contact.lastName}}</h4>
+                </div>
+                <div class="title-footer cloudy">
+                    <i style="color: #6dc534;" *ngIf="contact.isRead" class="fa-solid fa-check-double"></i>
+                    {{contact.latestOnline|date}}
+                </div>
+            </div>
+            <div class="body-latest">
+                <p class="cloudy">{{contact.latestMessage | summary}}</p>
+            </div>
+        </div>
+    </div>
+</div>
