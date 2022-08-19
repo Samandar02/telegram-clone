@@ -1,7 +1,7 @@
 <input placeholder="Search" type="text">
 <div class="contacts">
 
-    <div class="contact" *ngFor="let contact of contacts">
+    <div (click)="getMessage(contact.id)" class="contact" *ngFor="let contact of contacts$ | async">
         <div class="contact-image">
             <img [src]="contact.image" alt="">
         </div>

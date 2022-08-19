@@ -12,7 +12,8 @@
         </div>
     </div>
     <div class="message-content">
-        <div class="msg me">Asslom aleykum</div>
+        <div class="msg me" *ngFor="let message of (messages$ |async)?.messages">{{message?.message}}</div>
+        <div class="msg me"></div>
         <div class="msg he">Valeykum assalom</div>
     </div>
     <div class="sender">

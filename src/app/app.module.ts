@@ -8,6 +8,8 @@ import { ContactsComponent } from './contacts/contacts.component';
 import { InfoComponent } from './info/info.component';
 import { MessagesComponent } from './messages/messages.component';
 import { SummaryPipe } from './summary.pipe';
+import { StoreModule } from '@ngrx/store';
+import { storageReducer, userReducer } from './storage.reducers';
 
 @NgModule({
   declarations: [
@@ -16,11 +18,12 @@ import { SummaryPipe } from './summary.pipe';
     ContactsComponent,
     InfoComponent,
     MessagesComponent,
-    SummaryPipe
+    SummaryPipe,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    StoreModule.forRoot({users:userReducer,messages:storageReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]
