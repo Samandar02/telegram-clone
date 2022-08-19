@@ -2,21 +2,80 @@
     display: inline-block;
     position: absolute;
     top: 0;
-    width: 50%;
+    width: 65%;
     height: 100vh;
     .message-header{
         padding: 12px;
         display: flex;
         justify-content: space-between;
         align-items: center;
-        
+        .header-actions{
+            i{
+                cursor:pointer;
+                display: inline-block;
+                margin: 12px;
+            }
+        }
     }
     .message-content{
-        height: 80vh;
-        background-image: url(https://i.pinimg.com/736x/3d/8c/2f/3d8c2f2c82c1c9ef1e27be645cd1aa17.jpg);
+        background-repeat: no-repeat;
+        height: 84vh;
+        width: 100%;
+        background-image: linear-gradient(145deg,hsl(134deg 22% 63%),hsl(71deg 42% 68%));
         background-size: cover;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .msg{
+            margin: 21px 12px;
+            max-width: 400px;
+            display: inline;
+            background-color: white;
+            padding: 12px;
+            border-radius: 12px;
+            position: relative;
+        }
+        .me{
+            align-self: flex-end;
+            &::after{
+                border-radius: 0 0 0 12px;
+                display: inline-block;
+                position: absolute;
+                right: 9px; bottom: -8px;
+                width: 12px;
+                height: 12px;
+                background-color: white;
+                content: "";
+            }
+        }
+        .he{
+            align-self: flex-start;
+            &::before{
+                content: "";
+                border-radius: 0 0 37px 5px;
+                display: inline-block;
+                position: absolute;
+                left: 9px;
+                bottom: -8px;
+                width: 12px;
+                height: 12px;
+                background-color: white;
+            }
+        }
     }
     .sender{
+        padding: 6px 12px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        i{
+            cursor: pointer;
+        }
+        img{
+            width: 32px;
+            display: inline-block;
+            cursor: pointer;
+        }
         input{
             padding: 12px 24px;
             width: 100%;

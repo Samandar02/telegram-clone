@@ -1,5 +1,14 @@
 @import '../../styles/abstracts';
-
+.darker{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0;
+    z-index: -1;
+    transition: all .3s linear;
+    // background-color: rgba(black,.4);
+    // z-index: 998;
+}
 .navbar {
     z-index: 999;
     width: 20%;
@@ -68,6 +77,11 @@ input[type="checkbox"] {
     &:checked{
         & + .navbar{
             transform: translateX(0);
+        }
+        & ~ .darker{
+            background-color: rgba(black,.4);
+             z-index: 998;
+             opacity: 1;
         }
         &::before{
             top: 10px;

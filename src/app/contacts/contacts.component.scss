@@ -4,7 +4,7 @@ input[type="text"]{
     position: fixed;
     top: 13px;
     left: 45px;
-    width: 24%;
+    width: 30%;
     height: 32px;
     padding-left: 12px;
     outline: 0;
@@ -22,8 +22,8 @@ input[type="text"]{
 .contacts{
    display: inline-block;
    position: relative;
-   width: 28%;
-   height: 100vh;
+   width: 35%;
+   height: 90vh;
    overflow-y: visible;
    background-color: white;
    top: 48px;
@@ -47,6 +47,9 @@ input[type="text"]{
     &-body{
         width: 100%;
         .body-title{
+            .title-footer{
+                margin-right: 12px;
+            }
             display: flex;
             justify-content: space-between;
             i{
