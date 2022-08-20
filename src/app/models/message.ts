@@ -16,8 +16,8 @@ export class Message {
         public messages:IMessage[]
     ) { }
 }
-interface IMessage {
-    id?: number,
-    mode?: number,
-    message?: string,
+export interface IMessage {
+    id: number,
+    mode: number,
+    message: string,
 }

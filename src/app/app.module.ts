@@ -10,6 +10,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { SummaryPipe } from './summary.pipe';
 import { StoreModule } from '@ngrx/store';
 import { storageReducer, userReducer } from './storage.reducers';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { storageReducer, userReducer } from './storage.reducers';
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     StoreModule.forRoot({users:userReducer,messages:storageReducer})
   ],

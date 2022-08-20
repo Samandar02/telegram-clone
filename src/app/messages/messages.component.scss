@@ -27,7 +27,7 @@
         flex-direction: column;
         justify-content: flex-end;
         .msg{
-            margin: 21px 12px;
+            margin: 2px 12px;
             max-width: 400px;
             display: inline;
             background-color: white;
@@ -38,10 +38,11 @@
         .me{
             align-self: flex-end;
             &::after{
-                border-radius: 0 0 0 12px;
+                border-radius: 0px 10px 5px 0px;
                 display: inline-block;
                 position: absolute;
-                right: 9px; bottom: -8px;
+                right: -7px;
+                bottom: 2px;
                 width: 12px;
                 height: 12px;
                 background-color: white;
@@ -51,15 +52,15 @@
         .he{
             align-self: flex-start;
             &::before{
-                content: "";
-                border-radius: 0 0 37px 5px;
+                border-radius: 29px 0px 0px 5px;
                 display: inline-block;
                 position: absolute;
-                left: 9px;
-                bottom: -8px;
+                left: -7px;
+                bottom: 2px;
                 width: 12px;
                 height: 12px;
                 background-color: white;
+                content: "";
             }
         }
     }

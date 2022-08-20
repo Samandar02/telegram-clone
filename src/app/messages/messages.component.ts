@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Message } from '../models/message';
+import { IMessage, Message } from '../models/message';
 
 @Component({
   selector: 'messages',
@@ -9,12 +9,19 @@ import { Message } from '../models/message';
   styleUrls: ['./messages.component.scss']
 })
 export class MessagesComponent implements OnInit {
-  messages$:Observable<Message>
-  constructor(private store:Store<{messages:Message}>) {
+  messages$:Observable<any>
+  public message:any;
+  constructor(private store:Store<{messages:IMessage}>) {
     this.messages$ = store.select("messages");
-    console.log("select message")
+    this.messages$.subscribe(res=>{
+      console.log(res);
+      
+    })
    }
-
+   sendMessage(){
+    console.log(this.message)
+    this.message = ""
+   }
   ngOnInit(): void {
   }
 

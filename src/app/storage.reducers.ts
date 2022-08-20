@@ -1,5 +1,5 @@
 import { createReducer, on } from "@ngrx/store";
-import { Message } from "./models/message";
+import { Message,IMessage } from "./models/message";
 import { User } from "./models/user";
 import { getUsers, getMessages,sendMessage } from "./storage.actions";
 
@@ -66,7 +66,7 @@ let initialUser: User[] = [
         phoneNumber: "998942932011"
     }
 ]
-let initialMessage: Message[] = [
+let messages: Message[] = [
     {
         id: 1,
         messages:[
@@ -132,13 +132,14 @@ let initialMessage: Message[] = [
         ]
     },
 ]
+let initialMessage:IMessage[] = []
 export const userReducer = createReducer(
     initialUser,
     on(getUsers, state => ({...state}))
 )
 export const storageReducer = createReducer(
     initialMessage,
-    on(getMessages, (state,{id}) => state.filter(user=>user.id == id)),
-  //  on(sendMessage,(state,{sendTo,sendFrom,message})=>initialMessage.filter())
+    on(getMessages, (state,{id}) => (messages.filter(user=>user.id == id))[0].messages),
+   // on(sendMessage,(state,{sendTo,message})=>messages.filter())
 )
 
