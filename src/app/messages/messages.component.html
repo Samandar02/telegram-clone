@@ -11,14 +11,16 @@
             <i class="fa-solid fa-ellipsis-vertical"></i>
         </div>
     </div>
-    <div class="message-content">
-        <div class="msg" [ngClass]="message?.mode == 0?'me':'he'" *ngFor="let message of messages$ |async">
-            {{message.message}}
+    <div class="context">
+        <div class="message-content">
+            <div class="msg" [ngClass]="message?.mode == 0?'me':'he'" *ngFor="let message of messages$ |async">
+                {{message.message}}
+            </div>
         </div>
     </div>
     <div class="sender">
         <i class="fa-regular fa-face-smile"></i>
-        <input [(ngModel)]="message" placeholder="Write a message" type="text">
+        <input (keyup.enter)="sendMessage()" [(ngModel)]="message" placeholder="Write a message" type="text">
         <img (click)="sendMessage()" src="https://img.icons8.com/color/32/000000/filled-sent.png"/>
     </div>
 </div>

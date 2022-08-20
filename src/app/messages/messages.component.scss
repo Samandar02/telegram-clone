@@ -1,5 +1,5 @@
 .message{
-    display: inline-block;
+    right: 0;
     position: absolute;
     top: 0;
     width: 65%;
@@ -16,6 +16,10 @@
                 margin: 12px;
             }
         }
+    }
+    .context{
+        overflow-y: auto;
+
     }
     .message-content{
         background-repeat: no-repeat;
